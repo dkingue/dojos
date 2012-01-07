@@ -1,0 +1,29 @@
+<specification name="ShipSpec" fqn="org.dojo.battleship.ShipSpec">
+  <contexts>
+    <context name="Ship in position">
+      <behaviors>
+        <behavior name="check position" />
+      </behaviors>
+    </context>
+    <context name="New aircraft ship">
+      <behaviors>
+        <behavior name="ensure size" />
+      </behaviors>
+    </context>
+    <context name="Battle ship">
+      <behaviors>
+        <behavior name="ensure size" />
+      </behaviors>
+    </context>
+    <context name="Submarine or destroyer">
+      <behaviors>
+        <behavior name="ensure size" />
+      </behaviors>
+    </context>
+    <context name="Patrol ship">
+      <behaviors>
+        <behavior name="ensure size" />
+      </behaviors>
+    </context>
+  </contexts>
+</specification>

@@ -1,0 +1,17 @@
+<specification name="BoardSpec" fqn="org.dojo.battleship.BoardSpec">
+  <contexts>
+    <context name="Empty board">
+      <behaviors>
+        <behavior name="unit area" />
+      </behaviors>
+    </context>
+    <context name="Playable board">
+      <behaviors>
+        <behavior name="set pieces" />
+        <behavior name="set pieces out of bounds exception" />
+        <behavior name="set pieces not contained exception" />
+        <behavior name="set pieces overlap exception" />
+      </behaviors>
+    </context>
+  </contexts>
+</specification>
