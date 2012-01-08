@@ -10,39 +10,48 @@ import org.dojo.battleship.model.Carrier;
 import org.dojo.battleship.model.Ship;
 import org.junit.runner.RunWith;
 
-
+/**
+ * Player Specification class
+ *
+ */
 @RunWith(JDaveRunner.class)
 public class PlayerSpec extends Specification<Player> {
 
+	/*
+	 * New Player behavior
+	 */
 	public class NewPlayer {
 		private Player player;
 		
+		/*
+		 * Board factory
+		 */
 		public void create() {
-			//given
 			player = new Player();
 		}
+		
+		/*
+		 * Every player has a board
+		 */
 		public void hasBoard() {
-			//when create a new player
-			//then an empty board is created
 			specify(player.getBoard(), must.isNotNull());
 		}
+		
+		/*
+		 * Board should be 10x10 of size
+		 */
 		public void unitArea() {
 			specify(player.getBoard().getSize(), must.equal(100));
 		}
+		
 		public void validateArea() {
 			specify(player.getBoard().getRows(), must.equal(10));
 			specify(player.getBoard().getCols(), must.equal(10));
 		}
-	}
-	
-	public class Game {
-		private Player player;
 		
-		public void create() {
-			//given
-			player = new Player("Player 1");
-		}
-		
+		/*
+		 * Player should be able to place a piece in the board with no exception
+		 */
 		public void placePiece() throws Throwable {
 			specify(new Block() {
 				@Override
@@ -53,6 +62,10 @@ public class PlayerSpec extends Specification<Player> {
 			}, must.not().raiseAnyException());
 		}
 		
+		/*
+		 * Player should be able to place all pieces in the board with no 
+		 * exception
+		 */
 		public void placeAllPieces() throws Throwable {
 			//when
 			player.placeAll(new Ship[]{ new Carrier(new Position(0,0))});

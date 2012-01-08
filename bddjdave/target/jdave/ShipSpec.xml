@@ -5,7 +5,7 @@
         <behavior name="check position" />
       </behaviors>
     </context>
-    <context name="New aircraft ship">
+    <context name="Carrier ship">
       <behaviors>
         <behavior name="ensure size" />
       </behaviors>
@@ -15,7 +15,7 @@
         <behavior name="ensure size" />
       </behaviors>
     </context>
-    <context name="Submarine or destroyer">
+    <context name="Submarine and destroyer ship">
       <behaviors>
         <behavior name="ensure size" />
       </behaviors>

@@ -5,10 +5,6 @@
         <behavior name="has board" />
         <behavior name="unit area" />
         <behavior name="validate area" />
-      </behaviors>
-    </context>
-    <context name="Game">
-      <behaviors>
         <behavior name="place piece" />
         <behavior name="place all pieces" />
       </behaviors>

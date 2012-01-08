@@ -2,9 +2,15 @@ package org.dojo.battleship;
 
 import org.dojo.battleship.model.Ship;
 
-
+/**
+ * Player to play in the board. 
+ *
+ */
 public class Player {
 
+	/**
+	 * Player attributes
+	 */
 	private Board board;
 	private String name;
 	
@@ -41,12 +47,24 @@ public class Player {
 		return name;
 	}
 	
+	/**
+	 * Place all pieces in the board.
+	 * 
+	 * @param ship			List of Ships
+	 * @throws InvalidMove	Board violation
+	 */
 	public void placeAll(Ship[] ship) throws InvalidMove {
 		for(Ship s: ship) {
 			placePiece(s);
 		}
 	}
 	
+	/**
+	 * Place a piece in the board.
+	 * 
+	 * @param ship			Ship to add
+	 * @throws InvalidMove	Board violation
+	 */
 	public void placePiece(Ship ship) throws InvalidMove {
 		try {
 			board.add(ship);
