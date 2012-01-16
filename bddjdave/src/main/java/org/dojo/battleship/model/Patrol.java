@@ -16,14 +16,7 @@ public class Patrol extends Ship {
 	 */
 	public Patrol(Position position) {
 		super(position);
-	}
-
-	/**
-	 * @see org.dojo.battleship.model.Ship#getSize()
-	 */
-	@Override
-	public int getSize() {
-		return 2;
+		this.size = 2;
 	}
 
 }

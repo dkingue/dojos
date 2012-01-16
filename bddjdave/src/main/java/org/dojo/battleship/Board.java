@@ -64,6 +64,21 @@ public class Board {
 		return pieces;
 	}
 	
+	//TODO: work on Board spec for this one. May need to add damage control here
+	//so we know how many ship we have left in the board. Or just check the size
+	//and remove the ship from the list of ships.
+	public Ship dropBomb(Position position) {
+		Ship s = board[position.getX()][position.getY()];
+		if (s != null) {
+			s.setSize(s.getSize()-1);
+			board[position.getX()][position.getY()] = null;
+			if (s.getSize() <= 0) {
+				pieces.remove(s);
+			}
+		}
+		return s;
+	}
+	
 	/**
 	 * Add a new Ship on the board. Every Ship will have its coordinates and
 	 * they should be valid for the Board.

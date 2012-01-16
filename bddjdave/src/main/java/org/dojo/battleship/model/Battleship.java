@@ -16,14 +16,7 @@ public class Battleship extends Ship {
 	 */
 	public Battleship(Position position) {
 		super(position);
+		this.size = 4;
 	}
-
-	/**
-	 * @see org.dojo.battleship.model.Ship#getSize()
-	 */
-	@Override
-	public int getSize() {
-		return 4;
-	}
-
+	
 }

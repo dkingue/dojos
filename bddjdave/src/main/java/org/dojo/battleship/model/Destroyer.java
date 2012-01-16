@@ -16,14 +16,7 @@ public class Destroyer extends Ship {
 	 */
 	public Destroyer(Position position) {
 		super(position);
-	}
-
-	/**
-	 * @see org.dojo.battleship.model.Ship#getSize()
-	 */
-	@Override
-	public int getSize() {
-		return 3;
+		this.size = 3;
 	}
 
 }

@@ -16,14 +16,7 @@ public class Submarine extends Ship {
 	 */
 	public Submarine(Position position) {
 		super(position);
-	}
-
-	/**
-	 * @see org.dojo.battleship.model.Ship#getSize()
-	 */
-	@Override
-	public int getSize() {
-		return 3;
+		this.size = 3;
 	}
 
 }

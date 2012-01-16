@@ -20,6 +20,11 @@ import org.dojo.battleship.Position;
 public abstract class Ship {
 	
 	/**
+	 * Ship length
+	 */
+	protected int size;
+	
+	/**
 	 * Ship coordinates
 	 */
 	protected Position position;
@@ -56,5 +61,14 @@ public abstract class Ship {
 	 * 
 	 * @return ship length
 	 */
-	public abstract int getSize();
+	public int getSize() {
+		return size;
+	}
+	
+	/**
+	 * Set the length of the ship
+	 */
+	public void setSize(int length) {
+		this.size = length;
+	}
 }

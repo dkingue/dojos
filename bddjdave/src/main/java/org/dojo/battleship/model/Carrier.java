@@ -16,14 +16,7 @@ public class Carrier extends Ship {
 	 */
 	public Carrier(Position position) {
 		super(position);
-	}
-
-	/**
-	 * @see org.dojo.battleship.model.Ship#getSize()
-	 */
-	@Override
-	public int getSize() {
-		return 5;
+		this.size = 5;
 	}
 
 }
